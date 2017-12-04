@@ -12,22 +12,20 @@
 	display: none;
 	
 	@media (min-width:768px){
-		display: block;
-		
+		display: block;		
      }	
 }
 
 .about-app__title {
 
 	@media (min-width:768px) {
-
 		font-size: 16px;
 	}
 }
 
 .about-app-right-column {
-
-
+  padding-left: 35px;
+ 
   @media (min-width:768px) {
   	padding-top: 50px;
   }
@@ -39,13 +37,7 @@
 }
 
 .about-app__paragraf {	
-  @media (min-width:768px) {
-  	font-size: 16px;
-	line-height: 20px;
-	
-  }
-
- 
+  
 }
 
 .about-app__paragraf p {
@@ -54,6 +46,7 @@
 	@media (min-width:768px) {
   	font-size: 16px;
 	line-height: 20px;
+	margin-bottom: 15px;
 
 	 @media (min-width:992px) {
   	  margin-bottom: 12px;
@@ -66,15 +59,25 @@
 }
 
 .app-links {
+
 	text-align: center;
 	margin-bottom: 20px;
 	margin-top: 30px;
+	
     
     @media (min-width:768px) {
     	margin-top: 15px;
+    	text-align: left;
       & a {
-      	margin-right: 10px;
+      	margin-right: 20px;
         padding-top: 15px;}
+    }
+
+    img {
+    	margin-right: 15px;
+    	 @media (min-width:768px) {
+    	 	margin-right: 0; 
+    	 }
     }
 }
 /*a.app-link {

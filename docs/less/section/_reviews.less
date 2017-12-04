@@ -1,9 +1,62 @@
 .reviews {
+	position: relative;
 	height: 460px;
 	background-color: #4d3d4d;
 	background-image: url("../images/reviews-bg.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-	
+	text-align: center;
+	padding-top: 80px;
+	font-family: 'latohairline';
+	color: @greylight;
+
+}
+ .reviews__block {
+ 	position: absolute;
+ 	text-align: center;
+ }
+
+.reviews-foto{
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  height: 115px;
+  width: 115px;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #958b94;
+  border-radius: 50%;
+  overflow: hidden;
+  background-image: url("../images/usercontent/user-avatar-placeholder-small-female.png");
+  
+
+}
+
+
+
+.reviews-text{
+	font-size: 18px;
+	line-height: 24px;
+	padding-bottom: 20px;
+	padding-left: 30px;
+	padding-right: 20px;
+	@media (min-width: 768px) {
+		font-size: 30px;
+		line-height: 36px;
+		
+	}
+}
+
+
+
+.reviews-text-autor{
+    font-size: 16px;
+    line-height: 18px;
+    margin-bottom: 20px;
+    font-style: italic;
+	@media (min-width: 768px) {
+		font-size: 18px;
+		
+    }
 }

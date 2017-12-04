@@ -7,6 +7,10 @@
 	<link rel="stylesheet" type="text/css" href="libs/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="font/Lato/stylesheet.css">
+	<link rel="stylesheet" href="libs/owlcarousel/owl.carousel.css">
+	<link rel="stylesheet" type="text/css" href="libs/owlcarousel/owl.theme.css">
+	 <link rel="stylesheet" type="text/css" href="libs/owlcarousel/owl.transitions.css">
+
 </head>
 <body>	
 	<!--шапка-->
@@ -68,7 +72,7 @@
 		    	<div class="col-sm-4 benefits">	
                 <div class="benefits__item">
 					<div class="benefits__item-img">
-						<img src="images/icon-burger.png" alt="burger">
+						<img src="images/icon/icon-burger.png" alt="burger">
 					 </div>
 						<div class="benefits__item-title header__title-small">GET INSPIRED</div>
 						<div class="line"></div>
@@ -83,7 +87,7 @@
 				<div class="col-sm-4 benefits">	
                 <div class="benefits__item">
 					<div class="benefits__item-img">
-						<img src="images/icon-many.png" alt="the money">
+						<img src="images/icon/icon-many.png" alt="the money">
 					 </div>
 						<div class="benefits__item-title header__title-small">GET REWARDED</div>
 						<div class="line"></div>
@@ -98,7 +102,7 @@
 				<div class="col-sm-4 benefits">	
                 <div class="benefits__item">
 					<div class="benefits__item-img">
-						<img src="images/icon-cook.png" alt="cook">
+						<img src="images/icon/icon-cook.png" alt="cook">
 					 </div>
 						<div class="benefits__item-title header__title-small">GET SOCIAL</div>
 						<div class="line"></div>
@@ -118,7 +122,7 @@
 		    <div class="row">
 		    <div class="col-sm-6">
 		    	<div class="about-app__img">
-		    		<img src="images/app1.png"  class="img-responsive">
+		    		<img src="images/bg/app1.png"  class="img-responsive">
 		        </div>
 		    </div>
 
@@ -142,8 +146,8 @@
 						ante, a mattis massa.</p> 
 			     </div>	
 			     <div class="app-links">
-				     <a class="app-link" href="https://www.apple.com/ru/ios/app-store/" target="_blank"><img src="images/appstore.png"  alt="appstore"></a>
-				     <a class="app-link" href="https://play.google.com/store?hl=ru" target="_blank"><img src="images/googleplay.png"  alt="appstore"></a>
+				     <a class="app-link" href="https://www.apple.com/ru/ios/app-store/" target="_blank"><img src="images/icon/appstore.png"  alt="appstore"></a>
+				     <a class="app-link" href="https://play.google.com/store?hl=ru" target="_blank"><img src="images/icon/googleplay.png"  alt="appstore"></a>
 			     </div>
 			  </div>
 		   </div>
@@ -154,12 +158,80 @@
 		<!--отзывы-->   
 	    <div class="reviews">		    
 			<div class="row">		
-			    <div class="col-sm-8 col-lg-offset-2">
-					
+			   <div class="col-sm-8 col-sm-offset-2">
+			   	<div id="owl-carousel" class="owl-carousel">
+                  <div>
+                   <div class="reviews-foto">
+			    		   <img class="img-circle" src="images/usercontent/reviews-foto.png">
+                         </div>
+                         <div class="reviews-text">
+                    	“I am so happy because I found this recipe, and it just made my life easier.
+                         Thanks  so much for sharing!”
+                         </div>
+                         <div class="reviews-text-autor">- Michael Dawson, San Francisco, CA -</div>
+                 </div>
+                  <div>
+	                  	<div class="reviews-foto">
+			    		   <img class="img-circle" src="images/usercontent/bg_foto.jpg">
+                         </div>
+                         <div class="reviews-text">
+                    	“I am so happy because I found this recipe, and it just made my life easier.
+                         Thanks  so much for sharing!”
+                         </div>
+                         <div class="reviews-text-autor">- Lara Batal, San Francisco, CA -</div>    
+                  </div>
+
+                   <div class="reviews__block">
+			    	     <div class="reviews-foto">
+			    		   <img class="img-circle" src="images/usercontent/photo-small.jpg">
+                         </div>
+                         <div class="reviews-text">
+                    	“I am so happy because I found this recipe, and it just made my life easier.
+                         Thanks  so much for sharing!”
+                         </div>
+                         <div class="reviews-text-autor">- Emelian Kazakov, San Francisco, CA -</div>
+                         
+				 	 </div>
+
+
+			   	<!--блоки с отзывами-->  
+			      <!--<div class="reviews__block">
+			    	     <div class="reviews-foto">
+			    		   <img class="img-circle" src="images/usercontent/reviews-foto.png">
+                         </div>
+                         <div class="reviews-text">
+                    	“I am so happy because I found this recipe, and it just made my life easier.
+                         Thanks  so much for sharing!”
+                         <div class="reviews-text-autor">- Michael Dawson, San Francisco, CA -</div>
+                         </div>
+				 	 </div>
+
+				   <div class="reviews__block">
+			    	<div class="reviews-foto">
+			    		<img class="img-circle" src="images/usercontent/reviews-foto.png">
+                    </div>
+                    <div class="reviews-text">
+                    	“I am so happy because I found this recipe, and it just made my life easier.
+                         Thanks  so much for sharing!”
+                         <div class="reviews-text-autor">- Michael Dawson, San Francisco, CA -</div>
+                    </div>
+				  </div>
+
+				   <div class="reviews__block">
+			    	<div class="reviews-foto">
+			    		<img class="img-circle" src="images/usercontent/reviews-foto.png">
+                    </div>
+                    <div class="reviews-text">
+                    	“I am so happy because I found this recipe, and it just made my life easier.
+                         Thanks  so much for sharing!”
+                         <div class="reviews-text-autor">- Michael Dawson, San Francisco, CA -</div>
+                    </div>
+				  </div>
+                 //блоки с отзывами-->  
 				</div>		
 			</div>
 	   </div>
-    
+    </div>
     <!--//отзывы-->  
 
      <!--картинки с рецептами-->  
@@ -192,9 +264,11 @@
 
      <script src="libs/jquery/jquery-1.11.2.min.js"></script>
      <script src="libs/bootstrap/js/bootstrap.min.js"></script>
+     <script src="libs/owlcarousel/owl.carousel.min.js"></script>
+
      <script src="js/main.js"></script>
-     <script src="js/login-form.js"></script>
-     <script src="js/heading-button.js"></script>
+     <!--<script src="js/login-form.js"></script>
+     <script src="js/heading-button.js"></script>-->
 
      
 

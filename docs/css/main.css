@@ -213,7 +213,7 @@ h2 {
 }
 .header__title-small {
   display: inline-block;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 700;
   margin-bottom: 5px;
 }
@@ -474,7 +474,7 @@ h2 {
 .heading {
   display: table;
   background-color: #CD5C5C;
-  background-image: url("../images/bg-img.png");
+  background-image: url("../images/bg/bg-img.png");
   background-repeat: no-repeat;
   background-position: top 0 left -300px;
   background-size: cover;
@@ -515,7 +515,7 @@ h2 {
   top: 14%;
   left: 50%;
   margin-left: -50px;
-  background-image: url("../images/logo-big.png");
+  background-image: url("../images/icon/logo-big.png");
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
@@ -523,7 +523,7 @@ h2 {
 @media (min-width: 768px) {
   .heading__logo {
     position: absolute;
-    background-image: url("../images/logo.png");
+    background-image: url("../images/icon/logo.png");
     height: 880px;
     width: 70px;
     height: 65px;
@@ -564,6 +564,8 @@ h2 {
   font-size: 14px;
   line-height: 16px;
   margin-bottom: 8px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 @media (min-width: 768px) {
   .benefits__item-paragraf {
@@ -597,6 +599,9 @@ h2 {
     font-size: 16px;
   }
 }
+.about-app-right-column {
+  padding-left: 35px;
+}
 @media (min-width: 768px) {
   .about-app-right-column {
     padding-top: 50px;
@@ -608,12 +613,6 @@ h2 {
     padding-top: 100px;
   }
 }
-@media (min-width: 768px) {
-  .about-app__paragraf {
-    font-size: 16px;
-    line-height: 20px;
-  }
-}
 .about-app__paragraf p {
   margin-bottom: 8px;
 }
@@ -621,6 +620,7 @@ h2 {
   .about-app__paragraf p {
     font-size: 16px;
     line-height: 20px;
+    margin-bottom: 15px;
   }
 }
 @media (min-width: 768px) and (min-width: 992px) {
@@ -639,10 +639,19 @@ h2 {
 @media (min-width: 768px) {
   .app-links {
     margin-top: 15px;
+    text-align: left;
   }
   .app-links a {
-    margin-right: 10px;
+    margin-right: 20px;
     padding-top: 15px;
+  }
+}
+.app-links img {
+  margin-right: 15px;
+}
+@media (min-width: 768px) {
+  .app-links img {
+    margin-right: 0;
   }
 }
 /*a.app-link {
@@ -652,11 +661,57 @@ h2 {
 
 }*/
 .reviews {
+  position: relative;
   height: 460px;
   background-color: #4d3d4d;
   background-image: url("../images/reviews-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  text-align: center;
+  padding-top: 80px;
+  font-family: 'latohairline';
+  color: #aaaaaa;
+}
+.reviews__block {
+  position: absolute;
+  text-align: center;
+}
+.reviews-foto {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  height: 115px;
+  width: 115px;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #958b94;
+  border-radius: 50%;
+  overflow: hidden;
+  background-image: url("../images/usercontent/user-avatar-placeholder-small-female.png");
+}
+.reviews-text {
+  font-size: 18px;
+  line-height: 24px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 20px;
+}
+@media (min-width: 768px) {
+  .reviews-text {
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+.reviews-text-autor {
+  font-size: 16px;
+  line-height: 18px;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+@media (min-width: 768px) {
+  .reviews-text-autor {
+    font-size: 18px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
