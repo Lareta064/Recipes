@@ -92,6 +92,8 @@ body {
   max-width: 1600px;
   margin: 0;
   padding: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 ul,
 li,
@@ -722,8 +724,16 @@ ul {
     font-size: 18px;
   }
 }
+@font-face {
+  font-family: 'Helvetica Neue Cyr Ultra Light';
+  src: url('../font/helvetica/HelveticaNeueCyr-UltraLight.eot');
+  src: url('../font/helvetica/HelveticaNeueCyr-UltraLight.eot?#iefix') format('embedded-opentype'), url('../font/helvetica/HelveticaNeueCyr-UltraLight.woff') format('woff'), url('../font/helvetica/HelveticaNeueCyr-UltraLight.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 .cuisines {
   text-align: center;
+  position: relative;
 }
 .cuisines__title {
   display: none;
@@ -734,100 +744,21 @@ ul {
     margin-bottom: 3px;
   }
 }
-.cuisines__list {
-  font-size: 0;
-}
-.cuisines__list-item {
-  display: inline-block;
-  position: relative;
-}
-.cuisines__list-item img {
-  width: 160px;
-}
-@media (min-width: 360px) {
-  .cuisines__list-item img {
-    width: 180px;
-  }
-}
-@media (min-width: 375px) {
-  .cuisines__list-item img {
-    width: 187.5px;
-  }
-}
-@media (min-width: 412px) {
-  .cuisines__list-item img {
-    width: 206px;
-  }
-}
-@media (min-width: 600px) {
-  .cuisines__list-item img {
-    width: 300px;
-  }
+.cuisine__recipes-768 {
+  display: none;
 }
 @media (min-width: 768px) {
-  .cuisines__list-item img {
-    width: 153.6px;
-  }
-}
-@media (min-width: 992px) {
-  .cuisines__list-item img {
-    width: 198.4px;
-  }
-}
-@media (min-width: 1024px) {
-  .cuisines__list-item img {
-    width: 204.2px;
-  }
-}
-@media (min-width: 1200px) {
-  .cuisines__list-item img {
-    width: 240px;
-  }
-}
-@media (min-width: 1400px) {
-  .cuisines__list-item img {
-    width: 280px;
-  }
-}
-@media (min-width: 1500px) {
-  .cuisines__list-item img {
-    width: 300px;
-  }
-}
-@media (min-width: 1600px) {
-  .cuisines__list-item img {
-    width: 320px;
-    margin-bottom: -50px;
-  }
-}
-.cuisines__list-item--title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 13px;
-  color: #ffffff;
-  margin-left: -70px;
-  text-transform: uppercase;
-}
-@media (min-width: 768px) {
-  .cuisines__list-item--title {
-    font-size: 36px;
-  }
-}
-.cuisines__title-small {
-  font-size: 18px;
-}
-@media (min-width: 768px) {
-  .cuisines__title-small {
-    font-size: 36px;
+  .cuisine__recipes-768 {
+    display: block;
+    background: url("../images/cuisine/cuisines.jpg");
+    height: 450px;
   }
 }
 .header__title-cuisines__mobile {
   position: relative;
   text-align: center;
-  font-size: 36px;
+  font-size: 40px;
+  font-family: 'Helvetica Neue Cyr Ultra Light';
   padding-bottom: 30px;
   padding-top: 30px;
   color: #ffffff;
@@ -839,33 +770,73 @@ ul {
     display: none;
   }
 }
-.header__title-cuisines__mobile::before {
-  content: "";
-  width: 65px;
-  height: 65px;
-  position: absolute;
-  left: 20px;
-  top: 20%;
-  background: url("../images/icon/Icon-back.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  cursor: pointer;
+.cuisines-halv-l,
+.cuisines-halv-r {
+  width: 50%;
+  float: left;
 }
-.header__title-cuisines__mobile::before:hover,
-.header__title-cuisines__mobile::before:focus {
-  opacity: 0.7;
+.cuisines-halv-l img,
+.cuisines-halv-r img {
+  width: 100%;
+  height: 100%;
 }
-.header__title-cuisines__mobile::after {
-  content: "";
-  width: 65px;
-  height: 65px;
+@media (min-width: 768px) {
+  .cuisines-halv-l,
+  .cuisines-halv-r {
+    display: none;
+  }
+}
+a.cuisines__link-left,
+a.cuisines__link-right {
   position: absolute;
-  right: 20px;
-  top: 20%;
-  background: url("../images/icon/Icon-menu.png");
-  background-repeat: no-repeat;
-  background-position: center;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
   cursor: pointer;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  color: #ffffff;
+  text-align: center;
+  top: 50%;
+  margin-top: -25px;
+}
+a.cuisines__link-left:hover,
+a.cuisines__link-right:hover {
+  color: #FFFF00;
+}
+@media (min-width: 768px) {
+  a.cuisines__link-left,
+  a.cuisines__link-right {
+    display: none;
+  }
+}
+a.cuisines__link-left {
+  left: 30px;
+}
+a.cuisines__link-right {
+  right: 30px;
+}
+span.cuisines__arrow-left {
+  position: absolute;
+  left: 12px;
+  top: 7px;
+  font-size: 22px;
+}
+@media (min-width: 768px) {
+  span.cuisines__arrow-left {
+    display: none;
+  }
+}
+span.cuisines__menu-icon {
+  position: absolute;
+  right: 15px;
+  top: -2px;
+  font-size: 36px;
+}
+@media (min-width: 768px) {
+  span.cuisines__menu-icon {
+    display: none;
+  }
 }
 .cuisines__line {
   display: none;
@@ -874,25 +845,5 @@ ul {
   .cuisines__line {
     display: block;
   }
-}
-.number ul {
-  display: flex;
-  font-size: 36px;
-  line-height: 30px;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  width: 80%;
-}
-.number ul li {
-  display: inline-block;
-  padding-right: 50px;
-  padding-left: 50px;
-  padding-bottom: 15px;
-  padding-top: 30px;
-}
-li > span {
-  font-size: 12px;
-  color: #aaaaaa;
 }
 /*# sourceMappingURL=main.css.map */
