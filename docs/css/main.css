@@ -494,7 +494,7 @@ a.get-started:focus {
 .heading {
   display: table;
   background-color: #CD5C5C;
-  background-image: url("../images/bg/bg-img.png");
+  background-image: url("../images/bg/bg.png");
   background-repeat: no-repeat;
   background-position: top 0 left -300px;
   background-size: cover;
