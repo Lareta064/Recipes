@@ -1,0 +1,39 @@
+.footer {
+	
+	height: 65px;
+	background-color: #f7f7f7;
+	border-top: 1px solid #e2e2e2;
+	padding-top: 35px;
+	color: #8b8b8b;
+	font-size: 12px;
+	@media (min-width:768px){
+		 font-size: 14px;
+		 height: 95px;
+	}
+}
+
+.footer__content{
+
+  &:after,
+  &:before {
+    content: ""; 
+    display: table; 
+    clear: both;
+   }
+}
+.footer__copyright{
+float: left;
+}
+.footer__design {
+float: right;
+text-transform: uppercase;
+letter-spacing: 1px;
+ & a {
+ 	color: #000;
+ 	font-weight: 700;
+ }
+ & a:hover,
+ & a:focus {
+ 	color: #c36868;
+ }
+}

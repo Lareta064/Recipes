@@ -89,7 +89,6 @@ body {
   font-family: 'lato';
   width: 100%;
   min-width: 320px;
-  max-width: 1600px;
   margin: 0;
   padding: 0;
   margin-left: auto;
@@ -243,6 +242,14 @@ ul {
     border: 2px solid #FFF;
     padding: 22px 80px;
   }
+}
+a.get-started {
+  text-decoration: none;
+  color: #ffffff;
+}
+a.get-started:hover,
+a.get-started:focus {
+  color: red;
 }
 .header__subtitle {
   display: block;
@@ -572,7 +579,7 @@ ul {
   margin-bottom: 8px;
 }
 .benefits__item-paragraf {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 18px;
   margin-bottom: 8px;
   padding-left: 15px;
@@ -580,8 +587,8 @@ ul {
 }
 @media (min-width: 768px) {
   .benefits__item-paragraf {
-    font-size: 16px;
-    line-height: 18px;
+    font-size: 18px;
+    line-height: 28px;
   }
 }
 .about-app {
@@ -629,14 +636,14 @@ ul {
 }
 @media (min-width: 768px) {
   .about-app__paragraf p {
-    font-size: 16px;
-    line-height: 20px;
-    margin-bottom: 15px;
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 18px;
   }
 }
 @media (min-width: 768px) and (min-width: 992px) {
   .about-app__paragraf p {
-    line-height: 22px;
+    line-height: 24px;
   }
 }
 .about-app__title {
@@ -678,7 +685,7 @@ ul {
   color: #aaaaaa;
   margin-bottom: -25px;
 }
-@media (min-width: 600px) {
+@media (min-width: 768px) {
   .reviews {
     margin-bottom: 60px;
   }
@@ -731,6 +738,10 @@ ul {
   font-weight: normal;
   font-style: normal;
 }
+.container-fluid-p0 {
+  padding-left: 0;
+  padding-right: 0;
+}
 .cuisines {
   text-align: center;
   position: relative;
@@ -744,14 +755,99 @@ ul {
     margin-bottom: 3px;
   }
 }
-.cuisine__recipes-768 {
-  display: none;
+.cuisines__img {
+  width: 100%;
+  color: #ffffff;
+  float: left;
+  margin-bottom: 10px;
+}
+.cuisines__img:after,
+.cuisines__img:before {
+  content: "";
+  display: table;
+  clear: both;
 }
 @media (min-width: 768px) {
-  .cuisine__recipes-768 {
-    display: block;
-    background: url("../images/cuisine/cuisines.jpg");
-    height: 450px;
+  .cuisines__img {
+    margin-bottom: 50px;
+  }
+}
+.cuisines__img-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: #CD5C5C;
+  float: left;
+  width: 50%;
+  height: 120px;
+}
+@media (min-width: 400px) {
+  .cuisines__img-block {
+    height: 140px;
+  }
+}
+@media (min-width: 500px) {
+  .cuisines__img-block {
+    height: 185px;
+  }
+}
+@media (min-width: 600px) {
+  .cuisines__img-block {
+    height: 210px;
+  }
+}
+@media (min-width: 768px) {
+  .cuisines__img-block {
+    width: calc(20%);
+    height: 120px;
+  }
+}
+@media (min-width: 1000px) {
+  .cuisines__img-block {
+    width: 20%;
+    height: 140px;
+  }
+}
+@media (min-width: 1200px) {
+  .cuisines__img-block {
+    width: 20%;
+    height: 225px;
+  }
+}
+.cuisines__img-block--recipes {
+  font-size: 15px;
+  font-family: 'Times new roman';
+  font-style: italic;
+  font-weight: bold;
+}
+@media (min-width: 768px) {
+  .cuisines__img-block--recipes {
+    font-size: 12px;
+    font-weight: 400;
+  }
+}
+@media (min-width: 1200px) {
+  .cuisines__img-block--recipes {
+    font-size: 15px;
+    font-weight: bold;
+  }
+}
+.cuisines__img-block--name {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 24px;
+}
+@media (min-width: 1000px) {
+  .cuisines__img-block--name {
+    font-size: 26px;
+  }
+}
+@media (min-width: 1200px) {
+  .cuisines__img-block--name {
+    font-size: 30px;
   }
 }
 .header__title-cuisines__mobile {
@@ -770,22 +866,6 @@ ul {
     display: none;
   }
 }
-.cuisines-halv-l,
-.cuisines-halv-r {
-  width: 50%;
-  float: left;
-}
-.cuisines-halv-l img,
-.cuisines-halv-r img {
-  width: 100%;
-  height: 100%;
-}
-@media (min-width: 768px) {
-  .cuisines-halv-l,
-  .cuisines-halv-r {
-    display: none;
-  }
-}
 a.cuisines__link-left,
 a.cuisines__link-right {
   position: absolute;
@@ -797,8 +877,8 @@ a.cuisines__link-right {
   border-radius: 50%;
   color: #ffffff;
   text-align: center;
-  top: 50%;
-  margin-top: -25px;
+  top: 0;
+  margin-top: 35px;
 }
 a.cuisines__link-left:hover,
 a.cuisines__link-right:hover {
@@ -811,10 +891,20 @@ a.cuisines__link-right:hover {
   }
 }
 a.cuisines__link-left {
-  left: 30px;
+  left: 20px;
+}
+@media (min-width: 420px) {
+  a.cuisines__link-left {
+    left: 35px;
+  }
 }
 a.cuisines__link-right {
-  right: 30px;
+  right: 20px;
+}
+@media (min-width: 420px) {
+  a.cuisines__link-right {
+    right: 35px;
+  }
 }
 span.cuisines__arrow-left {
   position: absolute;
@@ -840,10 +930,107 @@ span.cuisines__menu-icon {
 }
 .cuisines__line {
   display: none;
+  margin-bottom: 45px;
 }
 @media (min-width: 768px) {
   .cuisines__line {
     display: block;
   }
+}
+nav {
+  width: 100%;
+}
+nav ul {
+  display: none;
+}
+@media (min-width: 768px) {
+  nav ul {
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 50px;
+  }
+}
+nav ul li {
+  list-style: none;
+  float: left;
+  text-align: center;
+  width: 16.6667%;
+  /* fallback for non-calc() browsers */
+  width: calc(20%);
+  box-sizing: border-box;
+}
+@media (min-width: 768px) {
+  .statistics__volume {
+    font-size: 24px;
+    font-weight: 700;
+  }
+}
+@media (min-width: 1000px) {
+  .statistics__volume {
+    font-size: 30px;
+    font-weight: 700;
+  }
+}
+.statistics__descrip {
+  color: #6b6b6b;
+  font-weight: 400;
+}
+@media (min-width: 768px) {
+  .statistics__descrip {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1000px) {
+  .statistics__descrip {
+    font-size: 16px;
+  }
+}
+/*nav ul li:first-child {
+ border-left: none;
+}
+ 
+nav ul li a {
+ display: block;
+ text-decoration: none;
+ color: #616161;
+ padding: 10px 0;
+}*/
+.footer {
+  height: 65px;
+  background-color: #f7f7f7;
+  border-top: 1px solid #e2e2e2;
+  padding-top: 35px;
+  color: #8b8b8b;
+  font-size: 12px;
+}
+@media (min-width: 768px) {
+  .footer {
+    font-size: 14px;
+    height: 95px;
+  }
+}
+.footer__content:after,
+.footer__content:before {
+  content: "";
+  display: table;
+  clear: both;
+}
+.footer__copyright {
+  float: left;
+}
+.footer__design {
+  float: right;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.footer__design a {
+  color: #000;
+  font-weight: 700;
+}
+.footer__design a:hover,
+.footer__design a:focus {
+  color: #c36868;
 }
 /*# sourceMappingURL=main.css.map */
